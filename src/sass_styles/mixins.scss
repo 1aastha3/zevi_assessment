@@ -1,0 +1,34 @@
+@mixin searchBoxStyles {
+
+    display: inline-flex;
+    color: rgba(0, 0, 0, 0.40);
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    height: 80px;
+    width: 100%;
+    max-width: 1000px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 700px;
+    border: 1px solid #000000;
+
+    input::placeholder {
+        font-size: 32px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+@mixin cardStyles {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+@mixin wishlistButtonStyles {
+    color: red;
+
+}
