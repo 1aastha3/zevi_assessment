@@ -58,8 +58,7 @@ const Home: React.FC<HomeProps> = () => {
 
     return (
         <div className="home-container">
-            <div className="background-image"></div> 
-            <div className="content-wrapper">
+            <div className="content-wrapper" style={{ display: 'flex' }}>
                 <SearchBox onChange={(e) => handleChange(e)} onClick={handleClick} isModalOpen={isModalOpen} styles={searchBoxStyle} onEnter={handleEnterPress}/> 
                 {isModalOpen && (
                     <div className="modal">
@@ -67,6 +66,7 @@ const Home: React.FC<HomeProps> = () => {
                     </div>
                 )}
             </div>
+            <div className="background-image"></div>
         </div>
     );
 }

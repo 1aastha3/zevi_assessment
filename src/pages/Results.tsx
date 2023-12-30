@@ -155,7 +155,6 @@ const Results: React.FC = () => {
     
   }, [selectedPriceRanges, selectedRatings, data]); // this useEffect Hook runs whenever the user selects a filter (except brand, because the the images are unrelated to the brand, as the methods of FAKER API have deprecated)
 
-
   // RENDERING 
   return (
     <Container maxWidth="xl" className="my-component" >
@@ -177,7 +176,7 @@ const Results: React.FC = () => {
 
       <Grid container spacing={3} marginTop="8rem" sx={{overflowY:'auto', height:'100vh'}}>
         <Grid item xs={12} md={3} className="side-panel"  sx={{position:'fixed'}}>
-          <Paper style={{ boxShadow: 'none',  }}>
+          <Paper style={{ boxShadow: 'none' }}>
             <div style={{ display: 'flex', flexDirection: 'column'}} >
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                     <Typography sx={{ fontFamily: `${fontFamily.font_1}`, 
@@ -193,7 +192,7 @@ const Results: React.FC = () => {
                   <FormControlLabel control={<Checkbox onChange={handleFilterChange} />} label="Adidas" sx={labelStyle}/>
                 </div>
 
-                <Divider style={{ margin: '8px 0px' }} />
+                <Divider style={{ margin: '8px 0px', width: '320px' }} />
 
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
@@ -204,14 +203,15 @@ const Results: React.FC = () => {
                               marginBottom: '0.8rem'
                           }}>PRICE RANGE</Typography>
                       <ArrowDropDown />
-                    </div>
+              </div>
+              
                   <FormControlLabel control={<Checkbox onChange={handleFilterChange} name="priceRange0to200"/>} label="Rs.0 - Rs. 200" sx={labelStyle}/>
                   <FormControlLabel control={<Checkbox onChange={handleFilterChange} name="priceRange200to400"/>} label="Rs.200 - Rs.400" sx={labelStyle}/>
                   <FormControlLabel control={<Checkbox onChange={handleFilterChange} name="priceRange400to700"/>} label="Rs.400 - Rs.700" sx={labelStyle}/>
                   <FormControlLabel control={<Checkbox onChange={handleFilterChange} name="priceRange700to1000"/>} label="Rs.700 - Rs. 1000" sx={labelStyle}/>
                 </div>
                         
-              <Divider style={{ margin: '8px 0' }} />
+              <Divider style={{ margin: '8px 0', width:'100%' }} />
 
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>

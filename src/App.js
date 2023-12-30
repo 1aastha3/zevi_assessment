@@ -2,13 +2,13 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Results from './pages/Results';
 import Home from './pages/Home';
-import { Typography } from '@mui/material';
 
 function App() {
-  return (
+  return ( // Zevi's logo setup and routing
     <div>
       <img
         src='/logo.png'
+        alt= 'logo'
         style={{
           position: 'fixed',
           width: '86px',

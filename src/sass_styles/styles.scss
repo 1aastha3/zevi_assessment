@@ -10,18 +10,21 @@
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
 
     background: {
         image: url('../shirt-mockup-concept-with-plain-clothing_23-2149448749.avif');
         size: cover;
-        position: center
+        position: center;
+        repeat: repeat;
     }
 
     ;
     opacity: 0.5;
-
+    z-index: -1;
 }
 
 .box-container {
@@ -36,7 +39,25 @@
     background-color: #FFFFFF;
     box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
-    padding: 2em
+    padding: 2em;
+}
+
+.content-wrapper {
+    position: 'fixed';
+    z-index: 4;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper>div {
+        width: 20%;
+        margin: 0 0;
+        justify-content: center;
+    }
+
+    .modal {
+        width: 100%;
+        margin: 0 0;
+    }
 }
 
 @media (min-width: 600px) and (max-width: 1024px) {
@@ -60,7 +81,7 @@
 }
 
 @media (max-width: 599px) {
-    .search-box {
+    .content-wrapper {
         width: 100%;
     }
 }

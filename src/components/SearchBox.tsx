@@ -1,5 +1,5 @@
 // this is a reusable and customizable search box component which accepts styles like margin, width and height as all other styles remain fixed. 
-import React, { ReactNode, ChangeEvent, KeyboardEvent } from 'react';
+import React, {ChangeEvent, KeyboardEvent } from 'react';
 import { Search } from "@mui/icons-material";
 import { TextField, InputProps } from "@mui/material";
 import '../sass_styles/styles.scss';
