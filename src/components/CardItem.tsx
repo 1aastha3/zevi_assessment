@@ -1,3 +1,4 @@
+//This is a reusable Card component for /results page
 import React, { useState } from 'react';
 import { Box, Card, CardContent, CardMedia, IconButton, Typography } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
@@ -9,8 +10,8 @@ import { fontFamily, fontSize, fontWeight } from '../typography';
 interface CardItemProps {
   image: string;
   productName: string;
-  price1: string;
-  price2: string;
+  price1: number;
+  price2: number;
   ratingStars: number;
   numberOfRatings: number;
 }

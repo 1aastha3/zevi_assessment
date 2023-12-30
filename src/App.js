@@ -10,7 +10,7 @@ function App() {
       <img
         src='/logo.png'
         style={{
-          position: 'absolute',
+          position: 'fixed',
           width: '86px',
           height: '44.69px',
           top: '2.5rem',

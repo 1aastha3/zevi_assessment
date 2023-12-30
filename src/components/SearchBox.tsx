@@ -1,3 +1,4 @@
+// this is a reusable and customizable search box component which accepts styles like margin, width and height as all other styles remain fixed. 
 import React, { ReactNode, ChangeEvent, KeyboardEvent } from 'react';
 import { Search } from "@mui/icons-material";
 import { TextField, InputProps } from "@mui/material";
@@ -15,6 +16,9 @@ interface SearchBoxProps {
 
 const SearchBox: React.FC<SearchBoxProps> = ({ onChange, onClick, onEnter, isModalOpen, styles }) => {
 
+  // handler function for handling event of prssing "Enter"
+  // I am using inbuilt MUI Search icon. I would have converted the FIGMA search icon vector to SVG and imported here but since I did not have any access to the FIGMA design edit, using that PLUGIN was invalid. 
+  
   const handleKeyPress = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       onEnter();
@@ -44,10 +48,10 @@ const SearchBox: React.FC<SearchBoxProps> = ({ onChange, onClick, onEnter, isMod
         InputProps={{
           endAdornment: (
             <>
-              <Search fontSize="large" />
+              <Search fontSize="large" /> 
             </>
           ),
-          sx: { ...searchBoxStyle } as InputProps['sx'], // Type assertion for compatibility
+          sx: { ...searchBoxStyle } as InputProps['sx'], 
           disableUnderline: true
         }}
       />
